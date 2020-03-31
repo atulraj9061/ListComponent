@@ -1,11 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ReactDOM from 'react-dom';
 import List from '../component/List';
 import Paragraph from '../component/Paragraph';
-import Adapter from 'enzyme-adapter-react-16';
- 
-Enzyme.configure({ adapter: new Adapter() });
 
 
 describe("List", () => {
