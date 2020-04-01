@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import List from '../component/List';
 import Paragraph from '../component/Paragraph';
+import renderer from 'react-test-renderer';
 
 
 describe("List", () => {
@@ -26,3 +27,10 @@ describe('List', () => {
     expect(items.first().text()).toEqual('Shopping')
   })
 })
+
+test ("function Testing",()=>{
+  let component = renderer.create(<List/>).getInstance();
+  let tree = component.dataFunction();
+  expect(tree).toBe(10)
+}
+)
