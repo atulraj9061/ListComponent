@@ -1,7 +1,5 @@
 import React from 'react'
-
 import Paragraph from '../component/Paragraph'
-
 
 
 const List = ({ items }) => {
@@ -9,8 +7,16 @@ const List = ({ items }) => {
     return <Paragraph>This list is empty</Paragraph>
   }
 
+  function greet(name) {
+    return `Hello ${name}!`;
+  }
   
-
+  function greetWorld(greettingFn) {
+    return greetingFn('world');
+  }
+  
+  greetWorld(greet);
+ 
   return (
     <div>
       { items.map(item => (
@@ -22,10 +28,9 @@ const List = ({ items }) => {
   )
 }
 
-dataFunction () 
+dataFunction (data) 
   {
-    return 10;
+    return 10*data;
   }
-
 
 export default List
