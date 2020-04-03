@@ -16,7 +16,17 @@ const List = ({ items }) => {
   }
   
   greetWorld(greet);
- 
+
+  function forEach(items, callback) {
+    for (let index = 0; index < items.length; index++) {
+      callback(items[index]);
+    }
+  }
+
+  function Button ({mockCallBack}){
+  return mockCallBack();
+  }
+
   return (
     <div>
       { items.map(item => (
@@ -24,6 +34,9 @@ const List = ({ items }) => {
           { item.body }
         </div>
       )) }
+
+   <Button onClick={mockCallBack}>Ok!</Button>
+
     </div>
   )
 }
